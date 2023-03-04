@@ -56,7 +56,9 @@ def main():
         file_dir = input()
         if str(file_dir[-1]) != "a":
             n, parents = input_from_file(file_dir)
-            print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
+            with open('read.txt', 'w') as f:
+                f.write(str(file_dir)+" "+str(n)+" "+str(parents))
+                f.close()
 
             if n and parents:
                 height = compute_height(n, parents)
@@ -64,7 +66,9 @@ def main():
     else:
         if input_method.strip(" ") == "I":
             n, parents = input_from_keyboard()
-            print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
+            with open('read1.txt', 'w') as f:
+                f.write(str(file_dir)+" "+str(n)+" "+str(parents))
+                f.close()
 
             if n and parents:
                 height = compute_height(n, parents)
