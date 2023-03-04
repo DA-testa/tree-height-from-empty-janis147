@@ -51,7 +51,7 @@ def input_from_file(file_dir):
 def main():
     input_method = input()
     print(input_method)
-    if input_method == "F":
+    if input_method.strip(" ") == "F":
         file_dir = input()
         print(file_dir)
         if str(file_dir[-1]) != "a":
@@ -60,7 +60,7 @@ def main():
                 height = compute_height(n, parents)
                 print(int(height))
     else:
-        if input_method == "I":
+        if input_method.strip(" ") == "I":
             n, parents = input_from_keyboard()
             if n and parents:
                 height = compute_height(n, parents)
