@@ -30,15 +30,17 @@ def input_from_keyboard(inputs):
 def input_from_file(file_dir):
     try:
         with open(f"./test/{file_dir}") as f:
-            contents = f.readlines()
+            contents = f.read()
     except:
         print("ERROR")
         return
 
-    n = contents[0].strip("\n")
-    parents = contents[1].strip("\n").split(" ")
+    inputs = contents.split("\\r\\n")
+    n = inputs[1]
+    parents = inputs[2].split()
     f.close()
     return n, parents
+
 
 def main():
     inputs = input().strip().split('\\r\\n')
