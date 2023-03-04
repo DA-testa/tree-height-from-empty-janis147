@@ -31,7 +31,9 @@ def compute_height(n, parents):
 
 def input_from_keyboard():
     n = input()
+    print(n)
     parents = input()
+    print(parents)
     parents = parents.split(" ")
     return n, parents
 
