@@ -50,8 +50,10 @@ def input_from_file(file_dir):
 
 def main():
     input_method = input()
+    print(input_method)
     if input_method == "F":
         file_dir = input()
+        print(file_dir)
         if str(file_dir[-1]) != "a":
             n, parents = input_from_file(file_dir)
             if n and parents:
