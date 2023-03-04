@@ -69,8 +69,6 @@ def main():
             if n and parents:
                 height = compute_height(n, parents)
                 print(int(height))
-    print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
-
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
 threading.stack_size(2 ** 27)  # new thread will get stack of such size
