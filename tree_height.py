@@ -31,9 +31,7 @@ def compute_height(n, parents):
 
 def input_from_keyboard():
     n = input()
-    print(n+"\n")
     parents = input()
-    print(parents+"\n")
     parents = parents.split(" ")
     return n, parents
 
@@ -42,7 +40,6 @@ def input_from_file(file_dir):
         with open(f"./test/{file_dir}") as f:
             contents = f.readlines()
     except:
-        print("ERROR")
         return
 
     n = contents[0].strip("\n")
@@ -56,20 +53,12 @@ def main():
         file_dir = input()
         if str(file_dir[-1]) != "a":
             n, parents = input_from_file(file_dir)
-            with open('read.txt', 'w') as f:
-                f.write(str(file_dir)+" "+str(n)+" "+str(parents))
-                f.close()
-
             if n and parents:
                 height = compute_height(n, parents)
                 print(int(height))
     else:
         if input_method.strip(" ") == "I":
             n, parents = input_from_keyboard()
-            with open('read1.txt', 'w') as f:
-                f.write(str(file_dir)+" "+str(n)+" "+str(parents))
-                f.close()
-
             if n and parents:
                 height = compute_height(n, parents)
                 print(int(height))
