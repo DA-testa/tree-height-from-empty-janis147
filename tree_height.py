@@ -55,8 +55,9 @@ def main():
     print(input_method)
     if input_method.strip(" ") == "F":
         file_dir = input()
+        sd = file_dir
+        print(sd+"\n")
         if str(file_dir[-1]) != "a":
-            print(file_dir+"\n")
 
             n, parents = input_from_file(file_dir)
             print(n+"\n")
