@@ -34,33 +34,14 @@ def input_from_keyboard():
     parents = input()
     parents = parents.split(" ")
     return n, parents
-def input_from_file(file_dir):
-    try:
-        with open(f"./test/{file_dir}") as f:
-            contents = f.readlines()
-    except:
-        print("ERROR")
-        return
-    n = contents[0].strip("\n")
-    parents = contents[1].strip("\n").split(" ")
-    f.close()
-    return n, parents
 
 def main():
     input_method = input()
-    if input_method == "F":
-        file_dir = input()
-        if str(file_dir[-1]) != "a":
-            n, parents = input_from_file(file_dir)
-            if n and parents:
-                height = compute_height(n, parents)
-                print(int(height))
-    else:
-        if input_method == "I":
-            n, parents = input_from_keyboard()
-            if n and parents:
-                height = compute_height(n, parents)
-                print(int(height))
+    
+    n, parents = input_from_keyboard()
+    if n and parents:
+        height = compute_height(n, parents)
+        print(int(height))
 
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
