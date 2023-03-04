@@ -52,28 +52,24 @@ def input_from_file(file_dir):
 
 def main():
     input_method = input()
-    print(input_method)
     if input_method.strip(" ") == "F":
         file_dir = input()
-        sd = file_dir
-        print(sd+"\n")
         if str(file_dir[-1]) != "a":
-
             n, parents = input_from_file(file_dir)
-            print(n+"\n")
-            print(parents+"\n")
+            print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
+
             if n and parents:
                 height = compute_height(n, parents)
                 print(int(height))
     else:
         if input_method.strip(" ") == "I":
             n, parents = input_from_keyboard()
-            print(n+"\n")
-            print(parents+"\n")
+            print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
 
             if n and parents:
                 height = compute_height(n, parents)
                 print(int(height))
+    print("\n"+str(file_dir)+" "+str(n)+str(parents)+"\n")
 
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
