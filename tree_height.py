@@ -33,10 +33,10 @@ def input_from_keyboard():
     try:
         n = input()
         parents = input()
-        print(str(n))
         parents = parents.split(" ")
         return n, parents
     except:
+        print(str(n))
         n = 0
         parents = 0
         return n, parents
