@@ -14,7 +14,7 @@
       "name": "1_",
       "setup": "",
       "run": "python3 tree_height.py",
-      "input": "I\r\n5\r\n4 -1 4 1 1",
+      "input": "I\r\n5\r\n4 -1 4 1 1\r",
       "output": "3",
       "comparison": "included",
       "timeout": 1,
