@@ -36,7 +36,7 @@ def input_from_keyboard():
         parents = parents.split(" ")
         return n, parents
     except:
-        print("ERROR")
+        print("ERROR1")
         n = 0
         parents = 0
         return n, parents
@@ -48,7 +48,7 @@ def main():
         height = compute_height(n, parents)
         print(int(height))
     else:
-        print("ERROR")
+        print("ERROR2")
 
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
