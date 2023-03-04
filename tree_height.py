@@ -34,8 +34,10 @@ def input_from_keyboard():
         n = input()
         parents = input()
         parents = parents.split(" ")
+        return
     except:
         print("ERROR")
+        return
     return n, parents
 
 def main():
