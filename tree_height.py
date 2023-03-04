@@ -37,7 +37,7 @@ def input_from_keyboard():
 
 def input_from_file(file_dir):
     try:
-        with open(f"./test/{file_dir}") as f:
+        with open(file_dir) as f:
             contents = f.readlines()
     except:
         print("ERROR")
