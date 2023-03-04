@@ -30,28 +30,42 @@ def compute_height(n, parents):
     return max_height
 
 def input_from_keyboard():
+    n = input()
+    parents = input()
+    parents = parents.split(" ")
+    return n, parents
+
+def input_from_file(file_dir):
     try:
-        n = input()
-        parents = input()
-        parents = parents.split(" ")
-        return n, parents
+        with open(f"./test/{file_dir}") as f:
+            contents = f.readlines()
     except:
-        print(str(n))
-        n = 0
-        parents = 0
-        return n, parents
+        print("ERROR")
+        return
+
+    n = contents[0].strip("\n")
+    parents = contents[1].strip("\n").split(" ")
+    f.close()
+    return n, parents
 
 def main():
     input_method = input()
-    print(input_method)
-    n, parents = input_from_keyboard()
-    if n and parents:
-        height = compute_height(n, parents)
-        print(int(height))
+    if input_method == "F":
+        file_dir = input()
+        if str(file_dir[-1]) != "a":
+            n, parents = input_from_file(file_dir)
+            if n and parents:
+                height = compute_height(n, parents)
+                print(int(height))
     else:
-        print("ERROR2")
+        if input_method == "I":
+            n, parents = input_from_keyboard()
+            if n and parents:
+                height = compute_height(n, parents)
+                print(int(height))
 
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
 threading.stack_size(2 ** 27)  # new thread will get stack of such size
 threading.Thread(target=main).start()
+
