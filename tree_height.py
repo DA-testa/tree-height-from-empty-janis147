@@ -34,11 +34,12 @@ def input_from_keyboard():
         n = input()
         parents = input()
         parents = parents.split(" ")
-        return
+        return n, parents
     except:
         print("ERROR")
-        return
-    return n, parents
+        n = 0
+        parents = 0
+        return n, parents
 
 def main():
     input_method = input()
