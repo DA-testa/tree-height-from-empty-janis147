@@ -43,6 +43,7 @@ def input_from_keyboard():
 
 def main():
     input_method = input()
+    print(input_method)
     n, parents = input_from_keyboard()
     if n and parents:
         height = compute_height(n, parents)
