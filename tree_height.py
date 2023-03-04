@@ -30,8 +30,8 @@ def compute_height(n, parents):
     return max_height
 
 def input_from_keyboard():
-    n = input("n: ")
-    parents = input("numbers: ")
+    n = input()
+    parents = input()
     parents = parents.split(" ")
     return n, parents
 
@@ -49,9 +49,9 @@ def input_from_file(file_dir):
     return n, parents
 
 def main():
-    input_method = input("Input method [F or I]: ")
+    input_method = input()
     if input_method == "F":
-        file_dir = input("Test file: ")
+        file_dir = input()
         if str(file_dir[-1]) != "a":
             n, parents = input_from_file(file_dir)
             if n and parents:
