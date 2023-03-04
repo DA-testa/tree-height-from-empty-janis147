@@ -60,7 +60,7 @@ def main():
             n, parents = input_from_file(file_dir)
             if n and parents:
                 height = compute_height(n, parents)
-                print(int(height))
+                print(int(height))da
     else:
         if input_method.strip(" ") == "I":
             n, parents = input_from_keyboard()
