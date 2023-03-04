@@ -31,9 +31,9 @@ def compute_height(n, parents):
 
 def input_from_keyboard():
     n = input()
-    print(n)
+    print(n+"\n")
     parents = input()
-    print(parents)
+    print(parents+"\n")
     parents = parents.split(" ")
     return n, parents
 
@@ -54,7 +54,7 @@ def main():
     input_method = input()
     print(input_method)
     if input_method.strip(" ") == "F":
-        print("file_dir")
+        print("file_dir"+"\n")
         file_dir = input()
         if str(file_dir[-1]) != "a":
             n, parents = input_from_file(file_dir)
