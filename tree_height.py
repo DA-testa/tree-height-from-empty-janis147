@@ -34,7 +34,6 @@ def input_from_keyboard():
     parents = input()
     parents = parents.split(" ")
     return n, parents
-
 def input_from_file(file_dir):
     try:
         with open(f"./test/{file_dir}") as f:
@@ -42,7 +41,6 @@ def input_from_file(file_dir):
     except:
         print("ERROR")
         return
-
     n = contents[0].strip("\n")
     parents = contents[1].strip("\n").split(" ")
     f.close()
