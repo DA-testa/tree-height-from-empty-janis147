@@ -33,10 +33,11 @@ def input_from_keyboard():
     try:
         n = input()
         parents = input()
+        print(str(n)+" "+str(parents))
         parents = parents.split(" ")
         return n, parents
     except:
-        print("ERROR1")
+        print(str(n)+" "+str(parents))
         n = 0
         parents = 0
         return n, parents
